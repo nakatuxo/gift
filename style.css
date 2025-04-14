@@ -1,0 +1,54 @@
+body {
+  background: linear-gradient(to right, #ffe6f0, #fff0f5);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  padding: 30px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  color: #e91e63;
+  font-size: 2.5em;
+}
+
+button {
+  background-color: #f8bbd0;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #f48fb1;
+}
+
+#conteudo {
+  display: none;
+  margin-top: 30px;
+}
+
+.imagens img {
+  width: 250px;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#login {
+  margin-top: 100px;
+}
+
+#senha {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 10px;
+  border: 1px solid pink;
+  width: 200px;
+}

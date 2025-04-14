@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>to Khyati 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hearts {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 8s infinite ease-in;
+    }
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+      100% { transform: translateY(-100vh) rotate(45deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts"></div>
+  <div id="login">
+    <h2>Hey! This is a secret birthday message 💌</h2>
+    <input type="password" id="senha" placeholder="Type the password...">
+    <button onclick="verificarSenha()">Enter</button>
+  </div>
+
+  <div class="container" style="display: none;">
+    <h1>hiiiiiiii Khyati, my future wife! 🎉</h1>
+    <button onclick="mostrar()">please touch here to open ur gift and use sound to hear the song i chose for u 🎁</button>
+
+    <div id="conteudo">
+      <p>
+        happy bdayyy Khyati ur so important to me, really.<br><br>
+        I told u to open this only on your bday and idk if u did but i hope u did lmao. <br><br>
+        anywayssssss ur so important to me for real i like you so muchh u have no idea. every second we dont text i miss u a lot i feel i wanna spam u 24/7. <br><br>
+        i wish u a nice day ur amazing u deserve everything. <br><br>
+        this site is everything i could do for u i wish i was there to take u to shopping and buy u much things i hope we marry btw💖✨
+      </p>
+
+      <div class="imagens">
+        <img src="imagens/khyati1.jpg" alt="Khyati 1">
+        <img src="imagens/khyati2.jpg" alt="Khyati 2">
+      </div>
+
+      <audio controls autoplay loop>
+        <source src="drake.mp3" type="audio/mp3">
+        your browser doesn't support audio
+      </audio>
+    </div>
+  </div>
+
+  <script>
+    function verificarSenha() {
+      const senha = document.getElementById("senha").value;
+      if (senha === "ireallylikeyou") {
+        document.getElementById("login").style.display = "none";
+        document.querySelector(".container").style.display = "block";
+      } else {
+        alert("Wrong password! Try again.");
+      }
+    }
+
+    function mostrar() {
+      document.getElementById("conteudo").style.display = "block";
+    }
+
+    function criarCoracoes() {
+      const heartsContainer = document.querySelector(".hearts");
+      setInterval(() => {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 3 + 5) + "s";
+        heartsContainer.appendChild(heart);
+        setTimeout(() => heart.remove(), 8000);
+      }, 300);
+    }
+
+    criarCoracoes();
+  </script>
+</body>
+</html>
